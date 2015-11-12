@@ -55,6 +55,6 @@ function findWinner () {
     combo.map(index => tiles[index])
       .every(tile => tile.textContent === 'X'))) return 'X'
   else if (winningCombination.some(combo =>
-    combo.every(tileIndex =>
-      tiles[tileIndex].textContent === 'O'))) return 'O'
+    combo.map(index => tiles[index])
+      .every(tile => tile.textContent === 'O'))) return 'O'
 }
